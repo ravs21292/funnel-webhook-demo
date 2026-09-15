@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    container_name: funnel-webhook-demo
+    ports:
+      - "8080:80"
+    volumes:
+      # Live-reload: edit files on Windows, Apache serves them immediately
+      - ./:/var/www/html
+    environment:
+      STRIPE_WEBHOOK_SECRET: whsec_demo_replace_me
+      # Optional — leave empty for Meta dry-run mode
+      META_PIXEL_ID: ""
+      META_ACCESS_TOKEN: ""
+    restart: unless-stopped
