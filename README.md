@@ -96,8 +96,3 @@ docker compose up --build -d
 - Stripe-style webhook signature verification
 - Server-side Meta event payload shaping (SHA-256 hashed PII)
 
-## Portfolio note
-
-If this repo is on GitHub, you can say:
-
-> I wrote the JavaScript form handling, API/webhook logic, PHP endpoints, validation, and event payload handling in this demo.
